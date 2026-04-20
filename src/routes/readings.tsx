@@ -8,6 +8,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "../components/ui/select";
+import { Button } from "../components/ui/button";
 
 const YEARS = Array.from({ length: 2013 - 1743 + 1 }, (_, i) => 1743 + i);
 
@@ -27,7 +28,7 @@ export default function Readings() {
                     </p>
                 </div>
 
-            <div className="mb-8 flex flex-row items-start gap-6">
+            <div className="mb-8 flex flex-row items-end gap-6">
                 {/* Year selector */}
                 <div className="w-80">
                     <label className="text-sm font-medium text-foreground mb-2 block">
@@ -64,6 +65,11 @@ export default function Readings() {
                             ))}
                         </SelectContent>
                     </Select>
+                </div>
+                <div className="">
+                    <Button disabled={!selectedYear || !selectedCountry} className="w-40">
+                        Load Data
+                    </Button>
                 </div>
             </div>
                 {/* Graph placeholder */}
