@@ -11,4 +11,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/graphql': {
+        target: 'https://climate-reading-api.vercel.app',
+        changeOrigin: true,
+      },
+    },
+  },
 })
