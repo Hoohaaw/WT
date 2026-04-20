@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@base-ui/react": "^1.4.0",
     "@fontsource-variable/figtree": "^5.2.10",
