@@ -3,12 +3,14 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import "./index.css";
 import Dashboard from "./routes/dashboard";
+import Readings from "./routes/readings";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/readings" element={<Readings />} />
             </Routes>
         </BrowserRouter>
     </StrictMode>
