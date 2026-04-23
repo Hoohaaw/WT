@@ -37,3 +37,8 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+# Local tooling
+.agents/
+.skills/
+skills-lock.json
