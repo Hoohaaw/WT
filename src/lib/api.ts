@@ -1,3 +1,3 @@
 export const GRAPHQL_ENDPOINT = import.meta.env.PROD
-    ? "/api/graphql"
-    : "/graphql";
+    ? `${window.location.origin}/api/graphql`
+    : `${window.location.origin}/graphql`;
