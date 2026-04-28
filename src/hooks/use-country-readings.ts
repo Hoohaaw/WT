@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import { request, gql } from "graphql-request";
 import type { Reading } from "./use-readings";
 
-const ENDPOINT = `${window.location.origin}/graphql`;
+import { GRAPHQL_ENDPOINT as ENDPOINT } from "../lib/api";
 
 const GET_READINGS = gql`
   query GetCityReadings($city: String!, $limit: Int!) {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { request, gql } from "graphql-request";
 
-const ENDPOINT = `${window.location.origin}/graphql`;
+import { GRAPHQL_ENDPOINT as ENDPOINT } from "../lib/api";
 
 const GET_READINGS = gql`
   query GetReadings {
