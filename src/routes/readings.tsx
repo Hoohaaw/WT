@@ -26,7 +26,7 @@ import { Button } from "../components/ui/button";
 const YEARS = Array.from({ length: 2013 - 1850 + 1 }, (_, i) => 1850 + i);
 
 export default function Readings() {
-    const { countries, loading: countriesLoading } = useCountries();
+    const { countries, loading: countriesLoading, error: countriesError } = useCountries();
     const [selectedCountry, setSelectedCountry] = useState<string>("");
     const [selectedCity, setSelectedCity] = useState<string>("");
     const [selectedYear, setSelectedYear] = useState<string>("");
@@ -57,6 +57,9 @@ export default function Readings() {
                     <p className="text-muted-foreground mt-1 text-sm">
                         Browse climate data by city and year
                     </p>
+                    {countriesError && (
+                        <p className="mt-2 text-xs text-destructive">Countries error: {countriesError.message}</p>
+                    )}
                 </div>
 
                 <div className="mb-8 flex flex-row items-end gap-4 flex-wrap">

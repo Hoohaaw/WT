@@ -27,9 +27,10 @@ export function useCountries() {
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
+        console.log("[useCountries] fetching from", ENDPOINT);
         request<CountriesData>(ENDPOINT, GET_COUNTRIES)
             .then((data) => setCountries(data.countries))
-            .catch(setError)
+            .catch((err) => { console.error("[useCountries] error", err); setError(err as Error); })
             .finally(() => setLoading(false));
     }, []);
 
