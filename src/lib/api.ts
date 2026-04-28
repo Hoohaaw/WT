@@ -1,3 +1,3 @@
 export const GRAPHQL_ENDPOINT = import.meta.env.PROD
-    ? `${window.location.origin}/api/graphql`
+    ? "https://climate-reading-api.vercel.app/graphql"
     : `${window.location.origin}/graphql`;

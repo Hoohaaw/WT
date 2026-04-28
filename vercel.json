@@ -1,12 +1,5 @@
 {
   "rewrites": [
-    {
-      "source": "/api/graphql",
-      "destination": "https://climate-reading-api.vercel.app/graphql"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
